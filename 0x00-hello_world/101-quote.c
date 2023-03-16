@@ -7,6 +7,6 @@
 int main(void)
 {
 	const char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-	write(2, msg, strlen(msg));
+	fwrite(2, msg, strlen(msg));
 	return (1);
 }
