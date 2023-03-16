@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -m32 $CFILE
+gcc -S -m64 $CFILE
