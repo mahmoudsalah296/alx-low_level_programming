@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	const char *msg = "and that piece of art is useful\" - \
+    const char *msg = "and that piece of art is useful\" - \
 			   Dora Korpar, 2015-10-19\n";
 
-	fwrite(msg, sizeof(char), strlen(msg), stderr);
+    fwrite(msg, sizeof(char), strlen(msg), stderr);
 	return (1);
 }
