@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main - the main function
- * @x: the int var
+ * Return: return 0 if true
  */
 int main(void)
 {
