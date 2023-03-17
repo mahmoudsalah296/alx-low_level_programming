@@ -17,4 +17,5 @@ int main(void)
 		c2++;
 	} while (c2 <= 'Z');
 	putchar('\n');
+	return (0);
 }

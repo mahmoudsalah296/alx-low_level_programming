@@ -12,4 +12,5 @@ int main(void)
 		c++;
 		putchar('\n');
 	} while (c <= 'z');
+	return (0);
 }
