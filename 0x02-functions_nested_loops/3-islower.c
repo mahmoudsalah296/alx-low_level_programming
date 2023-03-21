@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
   * _islower - check if character is lower
   * @c: character to be checked
