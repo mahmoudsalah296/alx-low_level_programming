@@ -1,3 +1,4 @@
+#include "putchar.c"
 /**
   * _islower - check if character is lower
   * @c: character to be checked
