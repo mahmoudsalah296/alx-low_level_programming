@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
   * jack_bauer - print hour by minutes
   */
