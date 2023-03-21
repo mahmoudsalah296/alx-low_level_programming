@@ -6,21 +6,19 @@
   */
 int print_sign(int n)
 {
-	int sign;
 	if (n > 0)
 	{
 		putchar('+');
-		sign = 1;
+		return (1);
 	}
 	else if (n < 0)
 	{
 		putchar('-');
-		sign = -1;
+		return (-1);
 	}
-	else 
+	else
 	{
 		putchar('0');
-		sign = 0;
+		return (0);
 	}
-	return (sign);
 }
