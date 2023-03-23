@@ -2,6 +2,7 @@
 
 /**
  * print_line - print _ of given number
+ * @n: number of _`
 */
 void print_line(int n)
 {
