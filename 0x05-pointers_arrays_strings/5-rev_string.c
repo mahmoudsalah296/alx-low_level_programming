@@ -6,7 +6,7 @@
 */
 void rev_string(char *s)
 {
-	long int i, j = sizeof(s);
+	long unsigned int i, j = sizeof(s);
 	char temp;
 
 	for (i = 0; i < sizeof(s) / 2 ; i++)
