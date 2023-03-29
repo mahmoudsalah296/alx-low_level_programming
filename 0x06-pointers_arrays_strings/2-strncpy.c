@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strcpy - copy a string into another pointer
+ * _strncpy - copy a string into another pointer
  * @dest: where we will copy to
  * @src: where will we copy from
  * @n: number of characters to be copied
