@@ -7,20 +7,19 @@
  */
 char *leet(char *s)
 {
-	int i = 0;
-	char a[] = {'A', 'a', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	char b[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	const char original[] = {'A', 'a', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	const char leet[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	while (s[i] != '\0')
+	for (int i = 0; s[i]; i++)
 	{
-		int k;
-
-		for (k = 0; k < (sizeof(a) / sizeof(char)); k++)
+		for (int j = 0; j < sizeof(original) / sizeof(original[0]); j++)
 		{
-			if (s[i] == a[k])
-				s[i] = b[k];
+			if (s[i] == original[j])
+			{
+				s[i] = leet[j];
+				break;
+			}
 		}
-		i++;
 	}
 	return (s);
 }
