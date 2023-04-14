@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+
 /**
   * main - entry point
   * @argc: arg count
@@ -24,7 +26,12 @@ int main(int argc, char *argv[])
 				sum += atoi(argv[i]);
 			else
 			{
-				printf("Error\n");
+				_putchar('E');
+				_putchar('r');
+				_putchar('r');
+				_putchar('o');
+				_putchar('r');
+				_putchar('\n');
 				return (1);
 			}
 		}
