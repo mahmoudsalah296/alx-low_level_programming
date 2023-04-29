@@ -3,30 +3,23 @@
 #include"lists.h"
 
 /**
- * free_listint2 - frees a listint_t list
- * @head: double pointer to the head node of the list
- */
+ * free_listint2 - frees a list
+ * @head: head of the list
+*/
 void free_listint2(listint_t **head)
 {
-	listint_t *current = *head;
-	
-	if (head == NULL) /* check if head is NULL */
+	listint_t *tmp;
+
+	if (*head == NULL)
 	{
 		printf("(nil)");
 		return;
 	}
-
-	if (*head == NULL) /* check if list is empty */
+	while (*head != NULL)
 	{
-		return;
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp);
 	}
-	while (current != NULL)
-	{
-		listint_t *next = current->next;
-
-		free(current);
-		current = next;
-	}
-
-	*head = NULL; /* set caller's pointer to NULL */
+	head = NULL;
 }
