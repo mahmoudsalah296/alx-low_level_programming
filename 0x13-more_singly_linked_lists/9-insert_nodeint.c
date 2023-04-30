@@ -11,8 +11,8 @@
  * Return: Address of the new node, or NULL if it failed
  **/
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
-	{
-	listint_t *new_node, *prev_node;
+{
+	listint_t *new_node, *tmp;
 	unsigned int i;
 
 	if (head == NULL)
@@ -27,17 +27,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new_node;
 		return (new_node);
 	}
-	prev_node = *head;
-	for (i = 0; prev_node != NULL && i < idx - 1; i++)
+	tmp = *head;
+	for (i = 0; tmp != NULL && i < idx - 1; i++)
 	{
-		prev_node = prev_node->next;
+		tmp = tmp->next;
 	}
-	if (prev_node == NULL || i != idx - 1)
+	if (tmp == NULL || i != idx - 1)
 	{
 	free(new_node);
 	return (NULL);
 	}
-	new_node->next = prev_node->next;
-	prev_node->next = new_node;
+	new_node->next = tmp->next;
+	tmp->next = new_node;
 	return (new_node);
 }
