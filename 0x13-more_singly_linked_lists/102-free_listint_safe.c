@@ -31,7 +31,7 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *node = has_a_loop(*h);
 	size_t size = 0;
 
-	if (*h == NULL)
+	if (*h == NULL || h == NULL)
 		return (0);
 	if (node)
 	{
