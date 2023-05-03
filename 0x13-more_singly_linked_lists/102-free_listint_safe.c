@@ -53,7 +53,7 @@ size_t free_listint_safe(listint_t **h)
 			*h = current;
 			size++;
 		}
-		*h = NULL;
+		h = NULL;
 	}
 	else
 	{
@@ -65,7 +65,7 @@ size_t free_listint_safe(listint_t **h)
 			node = *h;
 			size++;
 		}
-		*h = NULL;
+		h = NULL;
 	}
 	return (size);
 }
