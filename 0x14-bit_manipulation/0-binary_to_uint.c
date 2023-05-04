@@ -15,7 +15,6 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL || n < strlen(b))
 		return (0);
-	
 	while (n != 0)
 	{
 		digit = n % 10;
