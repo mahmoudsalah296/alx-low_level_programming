@@ -9,17 +9,19 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int number = 0;
-	unsigned long int n = atoi(b);
-	int digit, i = 0;
+	unsigned int number, i;
 
-	if (b == NULL || n < strlen(b))
+	if (b == NULL)
 		return (0);
-	while (n != 0)
+
+	i = number = 0;
+	while (b[i] != '\0')
 	{
-		digit = n % 10;
-		number += digit << i;
-		n = n / 10;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		number <<= 1;
+		if (b[i] == '1')
+			number |= 1;
 		i++;
 	}
 	return (number);
