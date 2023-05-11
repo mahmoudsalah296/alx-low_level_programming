@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #define BUFF 1024
 
-void close_flie(fd);
+void close_flie(int fd);
 /**
  * main - entry point
  * @argc: number of arguments passed to main
@@ -13,7 +13,7 @@ void close_flie(fd);
  */
 int main(int argc, char *argv[])
 {
-	int fd1, fd2, nbytes, c;
+	int fd1, fd2, nbytes;
 	char buffer[BUFF];
 
 	if (argc != 3)
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
  * close_flie - closes a file and check if it is closed successfully
  * @fd: file descriptor of file to be closed
 */
-void close_flie(fd)
+void close_flie(int fd)
 {
 	int c;
 
