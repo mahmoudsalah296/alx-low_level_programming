@@ -40,13 +40,13 @@ int main(int argc, char *argv[])
 	c = close(fd1);
 	if (c < 0)
 	{
-		dprintf(2, "Error: Can't close fd %d", fd1);
+		dprintf(2, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 	c = close(fd2);
 	if (c < 0)
 	{
-		dprintf(2, "Error: Can't close fd %d", fd2);
+		dprintf(2, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 	return (0);
