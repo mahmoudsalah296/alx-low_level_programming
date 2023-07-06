@@ -6,21 +6,13 @@
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int f = 1, res, num;
-	unsigned int count = 0;
+	unsigned int count = sizeof(n) * 8;
 
-	num = n;
-	while (num > 0)
-	{
-		count++;
-		num >>= 1;
-	}
-	if (index > count)
+	if (index >= count)
 		return (-1);
-	f <<= index;
-	res = n & f;
-	if (res > 0)
-		return (1);
-	else
-		return (0);
+
+	unsigned long int bitMask = 1 << index;
+	int bitValue = (n & bitMask) ? 1 : 0;
+
+	return (bitValue);
 }
