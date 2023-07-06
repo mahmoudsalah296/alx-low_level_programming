@@ -3,7 +3,7 @@
  *		number to another
  * @n: the number to be converted
  * @m: the goal number
-
+ * Return: number of bits to be flipped
 */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
