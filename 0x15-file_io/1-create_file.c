@@ -17,10 +17,12 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content == NULL)
 	{
-		close(fd);
-		exit(1);
+		nwrite = write(fd, "", 0);
 	}
-	nwrite = write(fd, text_content, strlen(text_content));
+	else
+	{
+		nwrite = write(fd, text_content, strlen(text_content));
+	}
 	if (nwrite == -1)
 	{
 		close(fd);
