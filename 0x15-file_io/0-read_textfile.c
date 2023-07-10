@@ -14,8 +14,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t nread, nwrite;
 	char buffer[BUFF_SIZE];
 
+	if (filename == NULL)
+		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd < 0 || filename == NULL)
+	if (fd < 0)
 	{
 		return (0);
 	}
