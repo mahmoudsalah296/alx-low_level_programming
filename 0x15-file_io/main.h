@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #define BUFF_SIZE 2056
+#define BUFFER 1024
 
 #include <stdio.h>
 #include <stdlib.h>
