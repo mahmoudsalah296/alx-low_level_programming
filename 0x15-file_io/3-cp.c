@@ -43,7 +43,7 @@ void exit_99(int fd, ssize_t nwrite, char **argv)
  * safe_close - safely close a file
  * @fd: file descriptor
 */
-void safe_close( int fd)
+void safe_close(int fd)
 {
 	int n = close(fd);
 
