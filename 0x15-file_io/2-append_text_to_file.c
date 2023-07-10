@@ -19,13 +19,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		close(fd);
 		if (access(filename, F_OK | W_OK) != 0)
-		{
 			return (-1);
-		}
 		else
-		{
 			return (1);
-		}
 	}
 	nwrite = write(fd, text_content, strlen(text_content));
 	if (nwrite == -1)
