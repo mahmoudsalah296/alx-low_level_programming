@@ -33,7 +33,7 @@ void exit_98(int fd, ssize_t nread, char **argv)
 */
 void exit_99(int fd, ssize_t nwrite, char **argv)
 {
-	if (fd == -1 || nwrite == -1)
+	if (fd == -1 || nwrite == -1 || access(argv[2], W_OK) != 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
