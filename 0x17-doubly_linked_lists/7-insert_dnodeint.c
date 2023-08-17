@@ -3,7 +3,7 @@
 /**
  * insert_dnodeint_at_index - insert a node at given index in a list
  * @h: head of the list
- * @index: index where the node will be inserted
+ * @idx: index where the node will be inserted
  * @n: data of the node
  * Return: pointer to inserted node
 */
