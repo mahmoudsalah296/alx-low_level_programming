@@ -5,8 +5,8 @@ NAME = school
 
 all: school
 
-school: objects
-	$(CC) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
 
-objects: $(SRC)
-	$(CC) -c $(SRC)
+%.o: %.c
+	$(CC) -c -o $@ $^
