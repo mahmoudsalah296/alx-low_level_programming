@@ -5,8 +5,8 @@ NAME = school
 
 all: school
 
-school: $(OBJ)
+school: objects
 	$(CC) $(OBJ) -o $(NAME)
 
-$(OBJ): $(SRC)
+objects: $(SRC)
 	$(CC) -c $(SRC)
